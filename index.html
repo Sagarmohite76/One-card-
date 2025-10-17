@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Credit Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+        .app-store {
+            display: inline-block;
+
+            width: 40%;
+            max-width: 30%;
+        }
+
+        .play-store {
+            display: inline-block;
+            padding: 15px;
+            width: 50%;
+            max-width: 39%;
+        }
+
+        .badge-container {
+            margin: 0 -10px;
+        }
+
+        a.btn-main {
+            padding: 0 15px;
+            border-radius: 10px;
+
+            font-stretch: normal;
+            font-style: normal;
+            color: #ffffff !important;
+            outline: none;
+
+            &:hover {
+                color: #FFFFFF;
+            }
+
+            &:focus {
+                color: #FFFFFF;
+                box-shadow: none;
+            }
+        }
+
+        .btn-main {
+            width: 15.18rem;
+            height: 3.375rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0.56;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        a:active {
+            transition: ease-in-out;
+        }
+
+        #TeamMetal {
+            font-family: Manrope;
+            font-size: 2.3rem;
+            font-weight: 700;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000;
+        }
+
+        #_Introducing_OneCard {
+            font-family: Manrope;
+            font-size: 3.6rem;
+            font-weight: 800;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.19;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000;
+        }
+
+        .btn-main {
+            width: 15.18rem;
+            height: 3.375rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0.56;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+
+        h1 {
+            display: block;
+            font-size: 32px;
+            margin-top: .67em;
+            margin-bottom: .67em;
+            margin-left: 0;
+            margin-right: 0;
+            font-weight: 700;
+        }
+
+        .gradient-text {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+
+        #_FeesText {
+            font-family: Manrope;
+            display: block;
+            font-size: 3rem;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.33;
+            letter-spacing: normal;
+            text-align: center;
+            color: #fff;
+        }
+
+
+
+        #_PowerApp {
+            font-family: Manrope;
+            display: block;
+            font-size: 4rem;
+            font-weight: 800;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.19;
+            letter-spacing: normal;
+            text-align: right;
+            color: #000;
+        }
+
+        #_PowerAppText {
+            font-family: Manrope;
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.33;
+            letter-spacing: normal;
+            text-align: right;
+            color: #696969;
+        }
+
+        /* section 4 */
+        #_Metal {
+            font-family: Manrope;
+            display: block;
+            font-size: 4rem;
+            font-weight: 800;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.4;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000;
+        }
+
+        #_MetalText {
+            font-family: Manrope;
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.33;
+            letter-spacing: normal;
+            text-align: left;
+            color: #696969;
+        }
+
+
+        #_Rewards {
+            font-family: Manrope;
+            font-size: 3rem;
+            font-weight: 800;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.19;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000;
+        }
+
+        #_RewardsText {
+            font-family: Manrope;
+            font-size: 1.6rem;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.33;
+            letter-spacing: normal;
+            text-align: left;
+            color: #696969;
+        }
+
+
+        #_EMI {
+            font-family: Manrope;
+            display: block;
+            font-size: 3.7rem !important;
+            font-weight: 800;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.19;
+            letter-spacing: normal;
+            text-align: right;
+            color: #000;
+        }
+
+        #_EMIText {
+            font-family: Manrope;
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.33;
+            letter-spacing: normal;
+            text-align: right;
+            color: #696969;
+        }
+
+        #_Investors {
+            font-family: Manrope;
+            font-size: 4rem;
+            font-weight: 800;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: center;
+            color: #000;
+        }
+
+        #_InvestorsText {
+            font-family: Manrope;
+            font-size: 1.6rem;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.33;
+            letter-spacing: normal;
+            text-align: center;
+            color: #696969;
+        }
+
+        #_Ears {
+            font-family: Manrope;
+            font-size: 2.188rem;
+            font-weight: 800;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.34;
+            letter-spacing: normal;
+            text-align: center;
+            color: #0093f7;
+        }
+
+        #_NewKid {
+            font-family: Manrope;
+            font-size: 1.25rem;
+            font-weight: 400;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.3;
+            letter-spacing: normal;
+            text-align: center;
+            color: #fff;
+        }
+
+        #_FollowUs {
+            font-family: Manrope;
+            font-size: 1.25rem;
+            font-weight: 700;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.3;
+            letter-spacing: normal;
+            text-align: center;
+            color: #fff;
+        }
+
+        h3 {
+            display: block;
+            font-size: 18px;
+            margin-top: 18px;
+            margin-bottom: 1.67em;
+            margin-left: 0;
+            margin-right: 0;
+            font-weight: 700;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar main-nav navbar-expand-lg fixed-top p-0 bg-white" id="navBarToHide" style="display: block;">
+        <div class="container">
+            <a class="navbar-brand" href="../../"><img style="height: 80px; width: 80px"
+                    src="Img/OneCard_Logo_OneCard_Logo_1.png" alt="OneCard Logo"></a>
+
+
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <button class="align-middle order-lg-last btn">
+                <img alt="Get it on Google Play" src="Img/googleplay.svg" style="width: 100px;  margin: 0px;">
+            </button>
+
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav w-100" style="margin-left: 9%;justify-content: space-around;">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-dark" href="./">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-dark" href="./about/">About Us</a>
+                    </li>
+                    <li class="nav-item d-flex justify-content-center align-items-center flex-column ">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle border-0 text-dark fw-bold bg-white" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Credit Card
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-dark" href="./offers/">Offers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-dark" href="./faq/">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-dark" href="./contact/">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-dark" href="./careers/">Careers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Section 1 -->
+    <div class="container-fluid mt-5 ">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-md-6 order-1 order-md-1 text-md-left">
+                    <div id="_Introducing_OneCard">
+                        <div id="TeamMetal">
+                            <span>Say Hi to</span>
+                        </div>
+                        <span style="color:rgba(24,147,247,1);">One Credit Card</span>
+                    </div>
+
+                    <div class="py-2">
+                        <span style="font-weight: bold;color: #1892F7;font-size: 18px;"> Our Banking Partners: </span>
+                    </div>
+                    <div>
+                        <span>
+                            <img class="img-fluid"
+                                src="https://assets.getonecard.app/assets/offers/allbankslogojune_1749730982902.png"
+                                alt="OneCard Banking Partners" style="height: auto;width: 355px;">
+                        </span>
+                    </div>
+                    <div id="_Tagline" class="pt-4">
+                        <p> India's best metal credit card. Built with full-stack tech. Backed by the principles of
+                            simplicity,
+                            transparency, and giving back control to the user.</p><br>
+                    </div>
+                    <button style="margin-right: 5%;" class="align-middle order-lg-last btn btn-primary">
+                        <div>
+                            <a href="https://apply.getonecard.app/?utm_source=OC_Web_ApplyMiddle&amp;utm_medium=Homepageapply2&amp;utm_campaign=Homepage_OC_Web_ApplyNow2"
+                                class="btn-main">Apply Now</a>
+                        </div>
+                    </button>
+                </div>
+                <div class="col-md-6 text-center order-2 order-md-2">
+                    <video class="img-fluid" style="width:100%; height:auto;float:left;" autoplay="autoplay"
+                        muted="muted" loop="loop">
+                        <source src="https://assets.getonecard.app/assets/legal/HomeScreen.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Section 2 -->
+    <section class="bg-dark">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-lg-12">
+                    <br>
+                    <h1 class="gradient-text text-center " style="color:rgba(24,147,247,1);">No Hidden Fees Ever.
+                    </h1>
+                    <br>
+                    <div id="_FeesText">
+                        <span class="text-center text-white">No Joining Fees.</span><br>
+                        <span class="text-center text-white">No Annual Fees.</span><br>
+                        <span class="text-center text-white">No Rewards Redemption Fees.</span>
+                        <br>
+                    </div>
+                    <br><br>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 3 -->
+    <section class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 ml-auto justify-content-center">
+                    <video class="img-fluid" style="float: left" width="460" height="460" autoplay="autoplay"
+                        muted="muted" loop="loop">
+                        <source src="/Video/powerfulmobileapp.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="col-lg-6 mr-auto align-self-center">
+                    <div class="feature-content">
+                        <div class="icon">
+                            <div style="text-align: right"><img src="Img/control_app_icon.svg" class="img-fluid"
+                                    alt="Powerful Mobile App"></div>
+                        </div>
+                        <div id="_PowerApp">
+                            Powerful <br>
+                            mobile app
+                        </div>
+                        <div id="_PowerAppText">
+                            Control all aspects of your One Credit Card from the powerful OneCard app - transaction
+                            limit, domestic/international use, online/offline use, contactless payments and much more.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4 -->
+    <div class="pt-5 mt-3" style="background-color:#F2F2F2;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 ml-auto align-self-center">
+                    <div class="feature-content">
+                        <div class="icon">
+                            <img src="Img/metal_icon.svg" class="img-fluid" alt="OneCard Metal Card">
+                        </div>
+                        <div id="_Metal">
+                            It's metal</div>
+                        <div id="_MetalText">
+                            A credit card that is exclusive and exquisitely crafted with metal, because you deserve only
+                            the best. Why settle for plastic cards anymore when you can have the premium feel of a Metal
+                            One Credit Card?</div><br>
+                    </div>
+                </div>
+                <div class="col-lg-6 mx-auto justify-content-center">
+                    <div class="image-content">
+                        <video class="img-fluid" style="width:100%; height:auto;float:left;" autoplay="autoplay"
+                            muted="muted" loop="loop">
+                            <source src="https://assets.getonecard.app/assets/legal/CardRotation.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Section 5-->
+    <div class="container-fluid mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 ml-auto justify-content-center">
+                    <video class="img-fluid" style="float: left" width="460" height="460" autoplay="autoplay"
+                        muted="muted" loop="loop">
+                        <source src="Video/SeamlessOnboarding.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="col-lg-6 mr-auto align-self-center">
+                    <div class="feature-content">
+                        <div class="icon">
+                            <div style="text-align: right"><img src="Img/kyc_icon.svg" class="img-fluid"
+                                    alt="Powerful Mobile App"></div>
+                        </div>
+                        <div id="_PowerApp">
+                            Seamless<br>
+                            on-boarding
+                        </div>
+                        <div id="_PowerAppText">
+                            Get started using a completely digital on-boarding process, and activate your One Credit
+                            Card in less than 5 minutes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Section 6 -->
+    <div class="container-fluid pt-5 pb-2" style="background-color: #F2F2F2;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 ms-auto align-self-center">
+                    <div class="feature-content">
+                        <div class="icon">
+                            <br>
+                            <img src="Img/rewards_icon.svg" class="img-fluid" alt="" width="66.33" height="58.92">
+                        </div>
+                        <div id="_Rewards">
+                            5X rewards on your top spends
+                        </div>
+                        <div id="_RewardsText">
+                            5X rewards on Top 2 spend categories. Points are credited instantly and never expire. Just
+                            swipe right to redeem. No more rounding off, get even fractional points.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mx-auto justify-content-center">
+                    <video class="img-fluid" style="float: left" width="400" height="400" autoplay="autoplay"
+                        muted="muted" loop="loop">
+                        <source src="Video/rewards.mp4" type="video/mp4">
+                    </video><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Section 7 -->
+    <div class="container-fluid mt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 ml-auto justify-content-center">
+                    <video class="img-fluid" style="float: left" width="460" height="460" autoplay="autoplay"
+                        muted="muted" loop="loop">
+                        <source src="Video/emi.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="col-lg-6 mr-auto align-self-center">
+                    <div class="feature-content">
+                        <div class="icon">
+                            <div style="text-align: right"><img src="Img/emi.svg" class="img-fluid"
+                                    alt="Powerful Mobile App"></div>
+                        </div>
+                        <div id="_EMI">
+                            One Credit Card <br>
+                            EMI
+                        </div>
+                        <div id="_EMIText">
+                            Shop in full, pay in parts. No calls, no emails, no documentation. Get points on EMI
+                            transactions, repay EMIs with reward points. Manage EMIs from the EMI Dashboard.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Section 8 -->
+    <div class="container-fluid pt-5 pb-2" style="background-color: #F2F2F2;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 ms-auto align-self-center">
+                    <div class="feature-content">
+                        <div class="icon">
+                            <br>
+                            <img src="Img/Family_icon_for_web.png" class="img-fluid" alt="" width="66.33"
+                                height="58.92">
+                        </div>
+                        <div id="_Rewards">
+                            MyFamily
+                        </div>
+                        <div id="_RewardsText">
+
+                            Share limit with your family. They get their own One Credit Card with separate offers while
+                            you keep track and control of their spending.
+                        </div>
+                        <a href="" class="btn btn-primary  my-4" style="border-radius: 7px;">Apply Now</a>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 mx-auto justify-content-center">
+                    <img class="img-fluid" src="Img/website_familycard_64c.gif" />
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Section 9 -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div>
+                        <div id="_Investors">
+                            Investors
+                        </div>
+                        <div id="_InvestorsText">
+                            We are backed by marquee investors who share our vision, passion, and commitment to
+                            first principles.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-2 mx-auto" style="margin-bottom: 20px;">
+                        <div class="block">
+                            <div class="shadow img-fluid">
+                                <img src="https://www.getonecard.app/images/team/peakXV1.svg"
+                                    onerror="this.src='https:\/\/www.getonecard.app\/images\/team\/peakXV1.svg'"
+                                    class="img-fluid w-100" alt="FPL Investors">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-2 mx-auto">
+                        <div class="block">
+                            <div class="shadow img-fluid">
+                                <img src="https://www.getonecard.app/images/team/hummingbird1.svg"
+                                    onerror="this.src='https:\/\/www.getonecard.app\/images\/team\/hummingbird1.svg'"
+                                    class="img-fluid w-100" alt="FPL Investors">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-2 mx-auto">
+                        <div class="block">
+                            <div class=" shadow img-fluid">
+                                <img src="https://www.getonecard.app/images/team/QED1.svg"
+                                    onerror="this.src='https:\/\/www.getonecard.app\/images\/team\/QED1.svg'"
+                                    class="img-fluid w-100" alt="FPL Investors">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-2 mx-auto">
+                        <div class="block">
+                            <div class="shadow  img-fluid">
+                                <img src="https://www.getonecard.app/images/team/z471p.svg"
+                                    onerror="this.src='https:\/\/www.getonecard.app\/images\/team\/z471p.svg'"
+                                    class="img-fluid w-100" alt="FPL Investors">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Section -->
+    <div class="container-fluid bg-dark mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="block">
+                        <ul class="list-inline mb-4">
+                        </ul>
+                        <a href="../../"><img style="height: 120px;width: 120px"
+                                src="Img/OneCard_Logo_OneCard_Logo_2.png" alt="OneCard Logo"></a><br>
+                        <img class="img-fluid" src="Img/crafted_with_love.svg" alt="Crafted with love in India"><br>
+                        <div id="_Ears" class="text-primary"> We are all ears!<br><br></div>
+                        <div id="_NewKid" class="text-white"> We are a new kid on the block, eager to learn.
+                            <br> All ideas and suggestions are welcome.
+                        </div><br>
+                        <br>
+                        <div id="_FollowUs"> Follow Us On</div>
+                        <br>
+                        <a href="https://www.facebook.com/GetOneCardIN/" target="_blank"><i
+                                class="fa-brands fa-square-facebook fs-3 text-white"></i></a>
+                        <a href="https://twitter.com/GetOneCardIN" target="_blank"><i
+                                class="fa-brands fa-square-x-twitter fs-3 text-white"></i></a>
+                        <a href="https://www.instagram.com/getonecardIN/">
+                            <i class="fa-brands fa-instagram fs-3 text-white"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa-brands fa-linkedin fs-3 text-white"></i>
+                        </a>
+
+                        <a href="">
+                            <i class="fa-brands fa-youtube fs-3 text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3 mx-auto">
+                <div class="col-3 justify-content-start">
+                    <h3 class="text-white">Credit Card Terms</h3>
+                    <p class="text-primary mt-4" style="line-height: .3;"> <a href="../../legal/bobcard_conditions/"
+                            class="text-primary text-decoration-none">BOBCARD</a></p>
+                    <p class="text-primary" style="line-height: .3;"> <a href="../../legal/csb_conditions/"
+                            class="text-primary text-decoration-none">CSB Bank</a></p>
+                    <p class="text-primary" style="line-height: .3;"><a href="../../legal/federal_conditions/"
+                            class="text-primary text-decoration-none">Federal Bank</a></p>
+                    <p class="text-primary" style="line-height: .3;"> <a href="../../legal/idfc_conditions/"
+                            class="text-primary text-decoration-none">IDFC Bank</a></p>
+                    <p class="text-primary" style="line-height: .3;"> <a href="../../legal/sbm_conditions/"
+                            class="text-primary text-decoration-none">SBM Bank</a></p>
+                    <p class="text-primary" style="line-height: .3;"><a href="../../legal/sib_conditions/"
+                            class="text-primary text-decoration-none">South Indian Bank</a>
+                    </p>
+                    <p class="text-primary" style="line-height: .3;"><a href="../../legal/ib_conditions/"
+                            class="text-primary text-decoration-none">Indian Bank</a>
+                    </p>
+                    <p style="line-height: .3;"> <a class="text-primary text-decoration-none"
+                            href="https://assets.getonecard.app/assets/legal/colectionagencysept.pdf"> Authorized
+                            Collection </a> </p>
+                    <p class="text-primary" style="line-height: .3;"><a class="text-primary text-decoration-none"
+                            href="https://assets.getonecard.app/assets/legal/One_Credit_Card_EMI_1740547707752.pdf">EMI
+                            Terms and Conditions</a> </p>
+                </div>
+                <div class="col-3 mx-auto">
+                    <h3 class="text-white"> Important links</h3>
+                    <p class="text-primary mt-4" style="line-height: .3;"> <a href="../../legal/bobcard_conditions/"
+                            class="text-primary text-decoration-none">Privacy Policy</a></p>
+                    <p class="text-primary" style="line-height: .3;"> <a href="../../legal/csb_conditions/"
+                            class="text-primary text-decoration-none">Terms Of Use</a></p>
+                    <p class="text-primary" style="line-height: .3;"><a href="../../legal/federal_conditions/"
+                            class="text-primary text-decoration-none">Unparliamentary language</a></p>
+                    <p class="text-primary" style="line-height: .3;"> <a href="../../legal/idfc_conditions/"
+                            class="text-primary text-decoration-none">Secure Usage Tips</a></p>
+                    <p class="text-primary" style="line-height: .3;"> <a href="../../legal/sbm_conditions/"
+                            class="text-primary text-decoration-none">Caution on Official Contact </a></p>
+                    <p class="text-primary" style="line-height: .3;"><a href="../../legal/sib_conditions/"
+                            class="text-primary text-decoration-none">Caution on Official Contact </a>
+                    </p>
+                    <p class="text-primary" style="line-height: .3;"><a href="../../legal/ib_conditions/"
+                            class="text-primary text-decoration-none">OneCard UPI Terms of Use</a>
+                    </p>
+                    <p style="line-height: .3;"> <a class="text-primary text-decoration-none"
+                            href="https://assets.getonecard.app/assets/legal/colectionagencysept.pdf">BBPS Terms of Use
+                        </a> </p>
+                    <p class="text-primary" style="line-height: .3;"><a class="text-primary text-decoration-none"
+                            href="https://assets.getonecard.app/assets/legal/One_Credit_Card_EMI_1740547707752.pdf">EMI
+                            Responsible Disclosure</a> </p>
+                </div>
+                <div class="col-3">
+                    <h3 class="text-white">Company</h3>
+                    <p class="text-primary mt-4" style="line-height: .3;"> <a href="../../legal/bobcard_conditions/"
+                            class="text-primary text-decoration-none">About us</a></p>
+                    <p class="text-primary" style="line-height: .3;"> <a href="../../legal/csb_conditions/"
+                            class="text-primary text-decoration-none">Join us</a></p>
+                    <p class="text-primary" style="line-height: .3;"><a href="../../legal/federal_conditions/"
+                            class="text-primary text-decoration-none">POSH @ Work</a></p>
+                </div>
+
+            </div>
+
+            <center class="mt-3"><img class="img-fluid"
+                    src="https://assets.getonecard.app/assets/offers/allbankslogojune_1749730982902.png"
+                    alt="OneCard Banking Partners" style="height: auto;width: 350px;" /><br><br></center>
+
+            <p>
+                <center>
+                    <a href="../../images/legal/ISOcertificate2025.pdf" target="_blank"><img src="Img/das-iso27001.jpg"
+                            class="rounded-square right-click" style="height: 40px;width: 50px"
+                            alt="ISO 27001 Certified"></a>&nbsp;
+                    <a href="https://www.visa.com/splisting/viewSPDetail.do?spId=896&coName=FPL%20Technologies%20Private%20Limited&HeadCountryList=INDIA&reset=yes&pageInfo=1%3B30%3BASC%3BcoName"
+                        target="_blank"><img src="Img/visa_service_provider.png" style="height: 50px;width: 50px"
+                            alt="Visa Service Provider"></a>
+                    <a href="https://assets.getonecard.app/assets/offers/PCICERTIFICATE_1755760833395.pdf"
+                        target="_blank"><img src="Img/pci_dss.jpg" style="height: 23px;width: 50px"
+                            alt="PCI DSS Certified"></a>
+            </p><br></center>
+            <p class="text-center text-md-center text-white mb-0 pb-4">Copyright © 2025 FPL Technologies Pvt. Ltd. All
+                Rights Reserved.</p>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
